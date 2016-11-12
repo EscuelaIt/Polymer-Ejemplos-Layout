@@ -1,0 +1,6 @@
+{
+  "name": "layout",
+  "short_name": "layout",
+  "start_url": "/",
+  "display": "standalone"
+}

@@ -1,0 +1,99 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+
+
+
+
+<dom-module id="layout-app">
+  <template>
+    <style>
+      :host {
+        --dark-primary-color:       #E64A19;
+        --default-primary-color:    #FF5722;
+        --light-primary-color:      #FFCCBC;
+        --text-primary-color:       #FFFFFF;
+        --accent-color:             #009688;
+        --primary-background-color: #FFCCBC;
+        --primary-text-color:       #212121;
+        --secondary-text-color:     #757575;
+        --disabled-text-color:      #BDBDBD;
+        --divider-color:            #BDBDBD;
+
+        --app-primary-color: var(--default-primary-color);
+      }
+      app-drawer-layout {
+        background-color: #eee;
+      }
+      app-header{
+        background-color: var(--default-primary-color);
+        color: #fff;
+      }
+      app-toolbar {
+        background-color: var(--default-primary-color);
+        
+      }
+    </style>
+    <app-drawer-layout fullbleed responsive-width="1000px">
+      <app-drawer>
+        drawer content
+      </app-drawer>
+      <app-header-layout has-scrolling-region>
+        <app-header condenses fixed reveals>
+          <app-toolbar>
+            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+            <div main-title>App name</div>
+          </app-toolbar>
+          <app-toolbar sticky>
+            <div >Hola esto es tb mi cabecera</div>
+          </app-toolbar>
+          <app-toolbar >
+            <div >Otra mas</div>
+          </app-toolbar>
+        </app-header>
+        <div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi nisi quisquam fugit unde nihil cumque iure earum aspernatur, aperiam iste corporis laudantium optio molestias minima temporibus exercitationem tempore consequuntur labore!</p>
+    <p>Asperiores iure, consequatur culpa beatae adipisci ipsum eligendi reiciendis quibusdam libero quas. Amet doloribus possimus voluptas, iusto ullam non corporis consequuntur voluptatibus quae, aliquid quisquam odio, ab velit minus deserunt!</p>
+    <p>In amet maxime cumque accusamus tempore vero ducimus totam excepturi minus sunt quasi qui animi beatae odit molestias, veniam. Exercitationem facilis obcaecati aliquam consequuntur non? Reprehenderit commodi facilis architecto repellat.</p>
+    <p>Repellat cumque, veniam doloribus ipsa quia assumenda facere impedit sit ab dicta neque at voluptatem ducimus, officiis dolorem sapiente, placeat nisi provident autem tempora omnis ea, aliquam iusto iste! Molestias?</p>
+    <p>Natus, labore, omnis repudiandae numquam ducimus consectetur libero distinctio officiis sapiente? Pariatur, doloremque facere temporibus, repellat quos commodi excepturi ut, qui nesciunt esse nobis! Delectus quibusdam provident voluptatum ab aperiam.</p>
+    <p>Dicta veniam explicabo eveniet at. Et, nisi. In iste laborum maiores excepturi voluptas enim nemo esse expedita vero, reprehenderit doloribus, hic, voluptatum cumque ad, velit maxime corrupti possimus architecto earum.</p>
+    <p>Architecto doloremque, voluptates autem soluta dicta placeat voluptas inventore corporis officiis. Alias officiis, tempore vero labore. Distinctio dolores ut fuga nulla, debitis possimus, magnam cum. Perferendis molestiae nesciunt veniam natus.</p>
+    <p>Quisquam dicta hic laborum neque nihil! Fugiat nobis, impedit earum reiciendis et voluptatum? Nemo deserunt ratione ipsum debitis sint? Molestiae ratione sint fuga repudiandae fugit odit et id distinctio nobis?</p>
+    <p>Voluptatibus soluta libero a quisquam in rerum inventore doloribus quas commodi! Velit laudantium possimus esse consectetur, maiores dolores fugit consequuntur delectus praesentium totam earum, ipsam eum, cum exercitationem cumque ipsa?</p>
+    <p>Fugit laborum, libero ipsam vero dolores, porro repellat ex, accusamus optio doloremque qui iusto quasi possimus earum minima sunt nisi reiciendis itaque commodi hic quisquam nesciunt sequi dicta non. Excepturi.</p>
+    <p>Velit voluptatibus culpa eius quas, illum hic! Repellat quasi nulla numquam dolores enim non molestiae, quidem fugiat quibusdam sint temporibus hic soluta eos eius deserunt aliquam ad, sequi! Doloremque, suscipit.</p>
+    <p>Voluptatibus provident, earum, laboriosam rerum incidunt delectus assumenda nam quisquam ipsum facilis ut laudantium animi minus explicabo nobis saepe magnam! Consectetur debitis a illo nemo facilis explicabo adipisci tempora. Vel.</p>
+    <p>Non quisquam, quas neque sint asperiores accusamus numquam consequuntur cupiditate sapiente aliquid voluptatem in ratione explicabo aut quis repellat magni quo, nisi vel consequatur natus animi eaque accusantium. Doloremque, est!</p>
+    <p>Vitae sit quisquam nam voluptate quos, cupiditate eius quo laudantium qui hic impedit delectus ducimus, ipsa beatae modi, iste veritatis soluta vero! Voluptatem blanditiis voluptatibus corporis quidem quisquam! Esse, facilis.</p>
+    <p>Culpa non, soluta obcaecati fugit id odit, repudiandae nesciunt magnam asperiores itaque, praesentium in saepe laudantium unde iste? Dolorum, mollitia unde minima atque soluta ipsam voluptate laudantium. Nostrum, voluptates, accusantium.</p>
+    <p>Deleniti a, aliquam maiores nisi ratione? Dicta delectus sunt optio recusandae perferendis tempora numquam aliquid deleniti soluta, possimus quas laudantium aut ratione obcaecati, assumenda itaque distinctio hic ipsam ex. Distinctio.</p>
+    <p>Incidunt aliquid ad dolorum minus nemo saepe voluptate nisi distinctio nobis deleniti labore recusandae fugiat, sequi dicta ratione voluptatibus odio quae magnam! Similique possimus commodi, veniam voluptatem quae repellat, pariatur!</p>
+    <p>Delectus quos reiciendis odio possimus porro veniam ex accusantium veritatis facilis, excepturi, hic, eius nulla vitae distinctio error a sed animi minima. Necessitatibus repellat, est quo in neque autem consectetur?</p>
+    <p>Minima nobis facere ducimus neque earum eligendi natus fuga ipsum ratione, perferendis molestiae nam reiciendis, consectetur enim! Distinctio explicabo cum tempore, quas voluptatibus, nemo cupiditate quos, ad dolorem sunt quis.</p>
+    <p>Neque accusamus et itaque, deleniti culpa! Illo alias eligendi cupiditate, quisquam labore consectetur sint ex eos accusamus odio rerum architecto quo tempora animi laborum id optio cumque, sit suscipit. Quae!</p>
+        </div>
+      </app-header-layout>
+    </app-drawer-layout>
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'layout-app',
+
+      properties: {
+      
+      },
+
+    });
+  </script>
+</dom-module>

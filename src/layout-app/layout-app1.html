@@ -1,0 +1,144 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/app-layout/app-toolbar/app-toolbar.html">
+<link rel="import" href="../../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../../bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="../../bower_components/iron-icon/iron-icon.html">
+<link rel="import" href="../../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../../bower_components/iron-selector/iron-selector.html">
+
+
+<link rel="import" href="../../bower_components/iron-media-query/iron-media-query.html">
+
+
+
+<dom-module id="layout-app">
+  <template>
+    <style>
+      :host {
+        --dark-primary-color:       #E64A19;
+        --default-primary-color:    #FF5722;
+        --light-primary-color:      #FFCCBC;
+        --text-primary-color:       #FFFFFF;
+        --accent-color:             #009688;
+        --primary-background-color: #FFCCBC;
+        --primary-text-color:       #212121;
+        --secondary-text-color:     #757575;
+        --disabled-text-color:      #BDBDBD;
+        --divider-color:            #BDBDBD;
+
+        --app-primary-color: var(--default-primary-color);
+      }
+      app-drawer-layout {
+        background-color: #eee;
+      }
+      app-header {
+        color: #fff;
+        background-image: url(/img/photo-1464817739973-0128fe77aaa1.jpeg);
+        background-position: 20% 60%;
+        background-size: 160vw;
+        --app-header-background-rear-layer: {
+          background-color: var(--dark-primary-color);
+          background-image: none;
+        }
+      }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+
+      .drawer-list div {
+        display: block;
+        padding: 0 16px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+        line-height: 40px;
+      }
+
+      .drawer-list div.iron-selected {
+        color: black;
+
+        font-weight: bold;
+      }
+
+      @media(min-width: 500px) {
+        app-header {
+          background-position: 0 60%;
+          background-size: 100vw;
+        }
+      }
+      h1{
+        text-shadow: 1px 1px 0 black;
+        font-size: 2.5em;
+      }
+      paper-tabs{
+        background-color: var(--default-primary-color)
+      }
+    </style>
+    <app-drawer-layout fullbleed responsive-width="600px" force-narrow="[[pantallasGrandes]]">
+      <app-drawer>
+        <app-toolbar>Menu</app-toolbar>
+        <div class="drawer-list">
+        <iron-selector class="drawer-list" selected="{{seleccion}}" attr-for-selected="name">
+          <div name="uno">Item 1</div>
+          <div name="dos">Item 2</div>
+          <div name="tres">Item 3</div>
+        </iron-selector>
+        </div>
+      </app-drawer>
+      <app-header-layout has-scrolling-region>
+        <app-header condenses reveals effects="resize-title blend-background">
+          <app-toolbar>
+              <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+              <h4 condensed-title>App name condensed</h4>
+              <paper-icon-button icon="star"></paper-icon-button>
+          </app-toolbar>
+          <app-toolbar>
+              <h1 main-title>App name</h1>
+          </app-toolbar>
+          <paper-tabs selected="{{seleccion}}" attr-for-selected="name" hidden="{{!pantallasGrandes}}">
+            <paper-tab name="uno">TAB 1</paper-tab>
+            <paper-tab name="dos">TAB 2</paper-tab>
+            <paper-tab name="tres">TAB 3</paper-tab>
+          </paper-tabs>
+          
+        </app-header>
+        
+        <iron-pages selected="{{seleccion}}" attr-for-selected="mostrar">
+          <section mostrar="uno">unodfdfsdfsdfds</section>
+          <section mostrar="dos">dossdfsdfds </section>
+          <section mostrar="tres">tressdfsf sdfs</section>
+        </iron-pages>
+        
+      </app-header-layout>
+    </app-drawer-layout>
+
+    <iron-media-query query="(min-width: 1000px)" query-matches="{{pantallasGrandes}}"></iron-media-query>
+
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'layout-app',
+
+      properties: {
+        pantallasGrandes: Boolean,
+        seleccion: {
+          type: String,
+          value: 'tres'
+        }
+      },
+
+    });
+  </script>
+</dom-module>
